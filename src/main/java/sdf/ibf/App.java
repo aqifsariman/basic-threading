@@ -59,5 +59,16 @@ public final class App {
         executorService.execute(mRI4);
         executorService.execute(mRI5);
         executorService.shutdown();
+
+        // LAMBDA OPERATIONS
+        MyRunnableInterface<Integer> addOperation = (a, b) -> a + b;
+        MyRunnableInterface<Integer> multiplyOperation = (a, b) -> a * b;
+        MyRunnableInterface<Integer> subtractOperation = (a, b) -> a - b;
+        MyRunnableInterface<String> conCatOperation = (a, b) -> a + b;
+        System.out.printf("Add Operation: %d\n", addOperation.process(1, 1));
+        System.out.printf("Multiply Operation: %d\n", multiplyOperation.process(2, 5));
+        System.out.printf("Subtract Operation: %d\n", subtractOperation.process(10, 2));
+        System.out.printf("Concatenation Operation: %s\n", conCatOperation.process("Lorem", " Ipsum"));
     }
+
 }
