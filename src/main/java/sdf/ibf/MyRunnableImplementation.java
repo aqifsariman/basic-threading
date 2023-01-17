@@ -14,16 +14,17 @@ public class MyRunnableImplementation implements Runnable {
     @Override
     public void run() {
         for (int i = 0; i < 5; i++) {
-            System.out.println(Thread.currentThread().getName() + "\t\tRunnable ..." +
+            System.out.println(Thread.currentThread().getName() + "\t" + taskName +
+                    "\tRunnable ..." +
                     i);
+            // int i = 0;
+            // while (i < 5) {
+            // System.out.println(Thread.currentThread().getName() + "\t" + taskName +
+            // "\tRunnable ..." +
+            // i);
+            // i++;
+            // }
         }
-
-        // int i = 0;
-        // while (i < 10) {
-        // System.out.println(Thread.currentThread().getName() + "\t\tRunnable ..." +
-        // i);
-        // i++;
-        // }
-
     }
+
 }
